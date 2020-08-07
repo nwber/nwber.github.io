@@ -1,7 +1,7 @@
 Kubernetes on a Raspberry Pi cluster
 
 
-​			![](k8s.png)![](docker.png) ![](prometheus.png)  ![](minecraft.png)
+​			![](/k8s.png)![](/docker.png) ![](/prometheus-pic.png)  ![](/minecraft-pic.png)
 
 
 
@@ -42,7 +42,7 @@ Running some apps:
 - Kubernetes Dashboard
   - Made by the team that makes Kubernetes, this actually is compatible with ARM. The install is fairly straightforward, but doesn't offer the most utility. The graphs and charts are nice, but I couldn't get the deployments via the dashboard to work and running it can be a pain. So...
 
-![](/Users/nwber/Desktop/k3s-project/dashboard2.png)
+![](dashboard2.png)
 
 - Prometheus, Grafana, and AlertManager.
 
@@ -50,27 +50,27 @@ Running some apps:
 
 
 
-  ![ingress](/Users/nwber/Desktop/k3s-project/prometheus-ingress.png)
+  ![ingress](/prometheus-ingress.png)
 
 
 
-  ![prometheus](/Users/nwber/Desktop/k3s-project/prometheus.png)
+  ![prometheus](/prometheus.png)
 
 
 
-  ![grafana](/Users/nwber/Desktop/k3s-project/grafana.png)
+  ![grafana](/grafana.png)
 
 
 
-  ![alertmanager](/Users/nwber/Desktop/k3s-project/alertmanager.png)
+  ![alertmanager](/alertmanager.png)
 
 
 
 - Anyway, now it's time to have fun. I installed a minecraft server! It runs smooth enough. If anyone wants to come over and play Minecraft feel free, my parents said it's ok.
 
-![](/Users/nwber/Desktop/k3s-project/minecraft_building_world.png)
+![](/minecraft_building_world.png)
 
-![minecraft](/Users/nwber/Desktop/k3s-project/minecraft.png)
+![minecraft](/minecraft.png)
 
 
 
