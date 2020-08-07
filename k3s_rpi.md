@@ -1,5 +1,5 @@
 Kubernetes on a Raspberry Pi cluster
-	
+
 
 ​			![](/Users/nwber/Downloads/k8s.png)![](/Users/nwber/Downloads/docker.png) ![](/Users/nwber/Downloads/prometheus.png)  ![](/Users/nwber/Downloads/minecraft.png)
 
@@ -38,7 +38,7 @@ Setting up the cluster:
 
 Running some apps:
 
-- This is where things get interesting. There's a million articles like "How to deploy XYZ software to Kubernetes". However, most of these will not work as the container images they pull are usually based on x86. Being an ARM based platform, these are incompatible. However, I am far from the first person to have this problem and quite a few of them have documented their journey. 
+- This is where things get interesting. There's a million articles like "How to deploy XYZ software to Kubernetes". However, most of these will not work as the container images they pull are usually based on x86. Being an ARM based platform, these are incompatible. However, I am far from the first person to have this problem and quite a few of them have documented their journey.
 - Kubernetes Dashboard
   - Made by the team that makes Kubernetes, this actually is compatible with ARM. The install is fairly straightforward, but doesn't offer the most utility. The graphs and charts are nice, but I couldn't get the deployments via the dashboard to work and running it can be a pain. So...
 
@@ -46,25 +46,25 @@ Running some apps:
 
 - Prometheus, Grafana, and AlertManager.
 
-  - You might think you could just google `install prometheus on kubernetes` and get the steps to install - you would be wrong. That would would bring you to a CoreOS/kube-prometheus repo, and this would work fine on a full-fat Kubernetes install. However the container images that repo pulls are x86, and won't work on ARM processors. This leads you to use the carlosedp/cluster-monitoring repo, designed for cross-architecture clusters. Just clone the repo, edit the config file, and follow the steps to build the manifests, and you have Prometheus, Grafana, and Alertmanager running. 
+  - You might think you could just google `install prometheus on kubernetes` and get the steps to install - you would be wrong. That would would bring you to a CoreOS/kube-prometheus repo, and this would work fine on a full-fat Kubernetes install. However the container images that repo pulls are x86, and won't work on ARM processors. This leads you to use the carlosedp/cluster-monitoring repo, designed for cross-architecture clusters. Just clone the repo, edit the config file, and follow the steps to build the manifests, and you have Prometheus, Grafana, and Alertmanager running.
 
-  
+
 
   ![ingress](/Users/nwber/Desktop/k3s-project/prometheus-ingress.png)
 
-  
+
 
   ![prometheus](/Users/nwber/Desktop/k3s-project/prometheus.png)
 
-  
+
 
   ![grafana](/Users/nwber/Desktop/k3s-project/grafana.png)
 
-  
+
 
   ![alertmanager](/Users/nwber/Desktop/k3s-project/alertmanager.png)
 
-  
+
 
 - Anyway, now it's time to have fun. I installed a minecraft server! It runs smooth enough. If anyone wants to come over and play Minecraft feel free, my parents said it's ok.
 
