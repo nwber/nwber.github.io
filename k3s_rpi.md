@@ -67,7 +67,7 @@ Running some apps:
 
 ![](img/minecraft_building_world.png)
 
-![minecraft](img/minecraft.png)
+​		![](img/gaming.png)
 
 
 
