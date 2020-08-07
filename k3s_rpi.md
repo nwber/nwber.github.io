@@ -1,6 +1,6 @@
 Kubernetes on a Raspberry Pi cluster
 
-<img src="k8s.png" style="zoom: 67%;" />  <img src="docker.png" style="zoom: 67%;" /> <img src="prometheus-pic.png" style="zoom: 67%;" />  <img src="minecraft-pic.png" style="zoom: 67%;" />
+<img src="img/k8s.png" style="zoom: 67%;" />  <img src="img/docker.png" style="zoom: 67%;" /> <img src="img/prometheus-pic.png" style="zoom: 67%;" />  <img src="img/minecraft-pic.png" style="zoom: 67%;" />
 
 I'm new to DevOps. I just started as an Associate DevOps Engineer at Sevatec (we're hiring!) and there seem to be a million things to learn. In college, I took a Configuration Management course that ended up being DevOps 101, and I was exposed to things like Agile methodology and Infrastructure as Code. I already knew some Docker, so for a group project I figured we could learn Kubernetes. GKE is easy enough to use, but so much of the 'guts' is abstracted away in the GUI that it's almost dummy-proof. When I'm working in the cloud, I have a tendency to blow away an instance when it's acting funny. With a physical build, this will hopefully force me to learn the tools better, plus cloud bills get expensive fast. I'll be focusing on learning Kubernetes and it's respective tooling, but I'm interested in where this project may go as I learn more.
 
@@ -39,7 +39,7 @@ Running some apps:
 - Kubernetes Dashboard
   - Made by the team that makes Kubernetes, this actually is compatible with ARM. The install is fairly straightforward, but doesn't offer the most utility. The graphs and charts are nice, but I couldn't get the deployments via the dashboard to work and running it can be a pain. So...
 
-![](dashboard2.png)
+![](img/dashboard2.png)
 
 - Prometheus, Grafana, and AlertManager.
 
@@ -47,27 +47,27 @@ Running some apps:
 
 
 
-  ![ingress](prometheus-ingress.png)
+  ![ingress](img/prometheus-ingress.png)
 
 
 
-  ![prometheus](/prometheus.png)
+  ![prometheus](img/prometheus2.png)
 
 
 
-  ![grafana](/grafana.png)
+  ![grafana](img/grafana.png)
 
 
 
-  ![alertmanager](/alertmanager.png)
+  ![alertmanager](img/alertmanager.png)
 
 
 
 - Anyway, now it's time to have fun. I installed a minecraft server! It runs smooth enough. If anyone wants to come over and play Minecraft feel free, my parents said it's ok.
 
-![](/minecraft_building_world.png)
+![](img/minecraft_building_world.png)
 
-![minecraft](/minecraft.png)
+![minecraft](img/minecraft.png)
 
 
 
