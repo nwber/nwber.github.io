@@ -1,7 +1,7 @@
 Kubernetes on a Raspberry Pi cluster
 
 
-​			![](/Users/nwber/Downloads/k8s.png)![](/Users/nwber/Downloads/docker.png) ![](/Users/nwber/Downloads/prometheus.png)  ![](/Users/nwber/Downloads/minecraft.png)
+​			![](k8s.png)![](docker.png) ![](prometheus.png)  ![](minecraft.png)
 
 
 
