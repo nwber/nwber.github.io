@@ -8,7 +8,7 @@ This will not be a comprehensive guide to do this yourself. However, I will link
 
 
 
-<h3>Build List:
+<h3>Build List:</h3>
 
 - Raspberry Pi 4B 2GB x4
 - 8 port unmanaged switch
@@ -22,7 +22,7 @@ This cluster clocks in with 16 ARM cores, 8GB RAM, 128GB of storage, and a netwo
 
 
 
-<h3>Quick breakdown of the technology:
+<h3>Quick breakdown of the technology:</h3>
 
 - [Docker](https://www.docker.com/why-docker) is a containerization tool. I won't explain all the advantages of containers but there's a lot. However, managing dozens or hundreds of containers can be difficult. So we use orchestrators. 
 - [Kubernetes](https://kubernetes.io/docs/concepts/overview/what-is-kubernetes/) (shorthand k8s) is an open-source container orchestration tool made by Google, based on their Borg system. Kubernetes is the industry standard orchestration technology. There is a steep learning curve but it's very powerful at scale, with features like auto-scaling and self-healing clusters. The basic architecture of a cluster (or mine at least) is a master server and several nodes that do work as orchestrated by the master.
@@ -32,7 +32,7 @@ This cluster clocks in with 16 ARM cores, 8GB RAM, 128GB of storage, and a netwo
 
   
 
-<h3>Setting up the cluster:
+<h3>Setting up the cluster:</h3>
 
 - Flashed [Raspberry Pi OS Lite](https://www.raspberrypi.org/downloads/raspberry-pi-os/) on all of the SD cards. Boot up the pi's.
 - Changed their hostnames to make them easier to manage.
@@ -44,7 +44,7 @@ This cluster clocks in with 16 ARM cores, 8GB RAM, 128GB of storage, and a netwo
 - One important thing to do is `scp` your /.kube/config file onto your local machine. This allows you to run kubectl commands such as `kubectl get pods` without sshing into your master every time you want to run a command.
 - Troubleshooting some weird issues with the k3s-agent.service on one of my nodes, simply uninstalling and reinstalling did the trick.
 
-<h3> Running some apps:
+<h3> Running some apps:</h3>
 
 - This is where things get interesting. There's a million articles like "How to deploy XYZ software to Kubernetes". However, most of these will not work as the container images they pull are usually based on x86. Being an ARM based platform, these are incompatible. However, I am far from the first person to have this problem and quite a few of them have documented their journey.
 - Kubernetes Dashboard
@@ -82,7 +82,7 @@ This cluster clocks in with 16 ARM cores, 8GB RAM, 128GB of storage, and a netwo
 
 
 
-<h3>What's next:
+<h3>What's next:</h3>
 
 - Dive deeper with some of the apps I've installed. Set up some Grafana dashboards, AlertManager notifications, etc.
 - It's one thing to run applications other people built, and it another to build it yourself. So next I would like to build something simple like a web server from the ground up. To build on that, I'm also interested in technologies like GitOps and Chaos Engineering so I might try to sprinkle in some of that once I get a handle on the infra.
