@@ -1,5 +1,7 @@
 <h1>Kubernetes on a Raspberry Pi cluster</h1>
 
+
+
 <img src="img/k8s.png" style="zoom: 67%;" />  <img src="img/docker.png" style="zoom: 67%;" /> <img src="img/prometheus-pic.png" style="zoom: 67%;" />  <img src="img/minecraft-pic.png" style="zoom: 67%;" />
 
 I'm new to DevOps. I recently started as an Associate DevOps Engineer and there seem to be a million things to learn. In college, I took a Configuration Management course that ended up being DevOps 101, and I was exposed to things like Agile methodology and Infrastructure as Code. I already knew some Docker, so for a group project I figured I could learn Kubernetes. GKE is easy enough to use, but so much of the 'guts' is abstracted away in the GUI that it's almost dummy-proof. When I'm working in the cloud, I have a tendency to blow away an instance when it's acting funny. With a physical build, this will hopefully force me to learn the tools better, plus cloud bills get expensive fast. I'll be focusing on learning Kubernetes and it's respective tooling, but I'm interested in where this project may go as I learn more.
@@ -47,14 +49,13 @@ This cluster clocks in with 16 ARM cores, 8GB RAM, 128GB of storage, and a netwo
 <h3> Running some apps:</h3>
 
 - This is where things get interesting. There's a million articles like "How to deploy XYZ software to Kubernetes". However, most of these will not work as the container images they pull are usually based on x86. Being an ARM based platform, these are incompatible. However, I am far from the first person to have this problem and quite a few of them have documented their journey.
-- Kubernetes Dashboard
+- [Kubernetes](https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/) Dashboard
   - Made by the team that makes Kubernetes, this actually is compatible with ARM. The install is fairly straightforward, but doesn't offer the most utility. The graphs and charts are nice, but I couldn't get the deployments via the dashboard to work and running it can be a pain. So...
 
 ![](img/dashboard2.png)
 
-- Prometheus, Grafana, and AlertManager.
-
-  - You might think you could just google `install prometheus on kubernetes` and get the steps to install - you would be wrong. That would would bring you to a CoreOS/kube-prometheus repo, and this would work fine on a full-fat Kubernetes install. However the container images that repo pulls are x86, and won't work on ARM processors. This leads you to use the carlosedp/cluster-monitoring repo, designed for cross-architecture clusters. Just clone the repo, edit the config file, and follow the steps to build the manifests, and you have Prometheus, Grafana, and Alertmanager running.
+- [Prometheus, Grafana, and AlertManager](https://github.com/carlosedp/cluster-monitoring).
+- You might think you could just google `install prometheus on kubernetes` and get the steps to install - you would be wrong. That would would bring you to a CoreOS/kube-prometheus repo, and this would work fine on a full-fat Kubernetes install. However the container images that repo pulls are x86, and won't work on ARM processors. This leads you to use the carlosedp/cluster-monitoring repo, designed for cross-architecture clusters. Just clone the repo, edit the config file, and follow the steps to build the manifests, and you have Prometheus, Grafana, and Alertmanager running.
 
 
 
@@ -72,9 +73,7 @@ This cluster clocks in with 16 ARM cores, 8GB RAM, 128GB of storage, and a netwo
 
   ![alertmanager](img/alertmanager.png)
 
-
-
-- Anyway, now it's time to have fun. I installed a minecraft server! It runs smooth enough. If anyone wants to come over and play Minecraft feel free, my parents said it's ok.
+- Anyway, now it's time to have fun. I installed a [minecraft server](https://www.jeffgeerling.com/blog/2020/raspberry-pi-cluster-episode-4-minecraft-pi-hole-grafana-and-more)! It runs smooth enough. If anyone wants to come over and play Minecraft feel free, my parents said it's ok.
 
 ![](img/minecraft_building_world.png)
 
@@ -85,6 +84,6 @@ This cluster clocks in with 16 ARM cores, 8GB RAM, 128GB of storage, and a netwo
 <h3>What's next:</h3>
 
 - Dive deeper with some of the apps I've installed. Set up some Grafana dashboards, AlertManager notifications, etc.
-- It's one thing to run applications other people built, and it another to build it yourself. So next I would like to build something simple like a web server from the ground up. To build on that, I'm also interested in technologies like GitOps and Chaos Engineering so I might try to sprinkle in some of that once I get a handle on the infra.
-- A technology that I find interesting is serverless computing, so I'd like to get a project like openFaaS running.
+- It's one thing to run applications other people built, and it another to build it yourself. So next I would like to build something simple like a web server from the ground up. 
+- A technology that I find interesting is serverless computing, so I'd like to get a project like [openFaaS](https://github.com/openfaas/faas) running.
 - Because I won't be using this cluster 99% of the time, I'd like it to be useful when I'm not tinkering on it. There are projects to get Folding@Home running in Kubernetes so I'd like to do that as well.
