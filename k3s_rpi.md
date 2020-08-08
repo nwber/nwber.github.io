@@ -55,23 +55,19 @@ This cluster clocks in with 16 ARM cores, 8GB RAM, 128GB of storage, and a netwo
 ![](img/dashboard2.png)
 
 - [Prometheus, Grafana, and AlertManager](https://github.com/carlosedp/cluster-monitoring).
-- You might think you could just google `install prometheus on kubernetes` and get the steps to install - you would be wrong. That would would bring you to a CoreOS/kube-prometheus repo, and this would work fine on a full-fat Kubernetes install. However the container images that repo pulls are x86, and won't work on ARM processors. This leads you to use the carlosedp/cluster-monitoring repo, designed for cross-architecture clusters. Just clone the repo, edit the config file, and follow the steps to build the manifests, and you have Prometheus, Grafana, and Alertmanager running.
-
-
+- You might think you could just google `install prometheus on kubernetes` and get the steps to install - you would be wrong. That would would bring you to a CoreOS/kube-prometheus repo, and this would work fine on a full-fat Kubernetes install. However the container images that repo pulls are x86, and won't work on ARM processors. However there is a project called [cluster-monitoring](https://github.com/carlosedp/cluster-monitoring) which is designed for cross-architecture clusters. Just clone the repo, edit the config file, and follow the steps to build the manifests, and you have [Prometheus](https://prometheus.io/), [Grafana](https://grafana.com/), and [Alertmanager](https://prometheus.io/docs/alerting/latest/overview/) running. I had some issues with building the manifests so I opened an issue and got it working.
 
   ![ingress](img/prometheus-ingress.png)
-
-
 
   ![prometheus](img/prometheus2.png)
 
 
 
-  ![grafana](img/grafana.png)
+![grafana](img/grafana.png)
 
 
 
-  ![alertmanager](img/alertmanager.png)
+![alertmanager](img/alertmanager.png)
 
 - Anyway, now it's time to have fun. I installed a [minecraft server](https://www.jeffgeerling.com/blog/2020/raspberry-pi-cluster-episode-4-minecraft-pi-hole-grafana-and-more)! It runs smooth enough. If anyone wants to come over and play Minecraft feel free, my parents said it's ok.
 
