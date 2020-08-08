@@ -1,4 +1,4 @@
-<p align="center"><h1>Kubernetes on a Raspberry Pi cluster</h1></p>
+<h1 align="center">Kubernetes on a Raspberry Pi cluster</h1>
 
 
 <p align="center"><img src="img/k8s.png" style="zoom: 67%;" />  <img src="img/docker.png" style="zoom: 67%;" /> <img src="img/prometheus-pic.png" style="zoom: 67%;" />  <img src="img/minecraft-pic.png" style="zoom: 67%;" /></p>
