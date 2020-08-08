@@ -1,9 +1,9 @@
-<h1>Kubernetes on a Raspberry Pi cluster</h1>
+<p align="center"><h1>Kubernetes on a Raspberry Pi cluster</h1></p>
 
 
 <p align="center"><img src="img/k8s.png" style="zoom: 67%;" />  <img src="img/docker.png" style="zoom: 67%;" /> <img src="img/prometheus-pic.png" style="zoom: 67%;" />  <img src="img/minecraft-pic.png" style="zoom: 67%;" /></p>
 
-I'm new to DevOps. I recently started as an Associate DevOps Engineer and there seem to be a million things to learn. So I figured I could do a project running Kubernetes on some Raspberry Pi's. It's a cheap(ish) way to sink my teeth into the technology. When I'm working in the cloud, I have a tendency to blow away an instance when it's acting funny. With a physical build, this will hopefully force me to learn the tools better, plus cloud bills get expensive fast. I'll be focusing on learning Kubernetes and it's respective tooling, but I'm interested in where this project may go as I learn more. 
+I'm new to DevOps. I recently started as an Associate DevOps Engineer and there seem to be a million things to learn. So I figured I could do a project running Kubernetes on some Raspberry Pi's. It's a cheap(ish) way to sink my teeth into the technology. When I'm working in the cloud, I have a tendency to blow away an instance when it's acting funny. With a physical build, this will hopefully force me to learn the tools better, plus cloud bills get expensive fast. I'll be focusing on learning Kubernetes and it's respective tooling, but I'm interested in where this project may go as I learn more.
 
 This will not be a comprehensive guide to do this yourself. However, I will try to link the sources I used where applicable. Inspired by [Jeff Geerling's build](https://www.pidramble.com/).
 
@@ -49,11 +49,11 @@ This cluster clocks in with 16 ARM cores, 8GB RAM, 128GB of storage, and a netwo
 
   - You might think you could just google `install prometheus on kubernetes` and get the steps to install - you would be wrong. That would would bring you to a CoreOS/kube-prometheus repo, and this would work fine on a full-fat Kubernetes install. However the container images that repo pulls are x86, and won't work on ARM processors. However there is a project called [cluster-monitoring](https://github.com/carlosedp/cluster-monitoring) which is designed for cross-architecture clusters. Just clone the repo, edit the config file, and follow the steps to build the manifests, and you have [Prometheus](https://prometheus.io/), [Grafana](https://grafana.com/), and [Alertmanager](https://prometheus.io/docs/alerting/latest/overview/) running. I had some issues with building the manifests so I opened an issue and got it working.
 
-  
+
 
   ![ingress](img/prometheus-ingress.png)
 
-  
+
 
   ![prometheus](img/prometheus2.png)
 
