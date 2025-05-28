@@ -31,7 +31,7 @@ Does not include Oracle
 | Linode       | Nanode 1 GB          | 5      | 1    | 5.00    |
 | OVH          | d2-2                 | 6.57   | 1    | 6.57    |
 
-# RAM
+## RAM
 
 | Provider     | Instance name        | $ / mo | RAM (GB) | $ / RAM |
 |--------------|----------------------|--------|----------|---------|
@@ -42,3 +42,7 @@ Does not include Oracle
 | DigitalOcean | Basic Regular 512MB  | 4      | 0.5      | 8       |
 | OVH          | d2-2                 | 6.57   | 2        | 3.285   |
 | Azure        | b1ls                 | 6.14   | 0.5      | 12.28   |
+
+## Conclusion
+
+Everyone on Twitter was right! Hetzner rocks. 
