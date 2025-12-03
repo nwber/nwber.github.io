@@ -1,5 +1,7 @@
-Welcome to my "blog".
+Welcome to my "blog" where I share "insightful" thoughts on the cloud and stuff.
 
-[k3s_rpi](k3s_rpi.md)
+[ArgoCD - Getting Started](ArgoCD.md)
 
-[dirt cheap compute](compute.md)
+[Comparing free/cheap compute options in the cloud](compute.md)
+
+[Running k3s on a Raspberry Pi cluster](k3s_rpi.md)
