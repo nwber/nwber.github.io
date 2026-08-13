@@ -33,7 +33,7 @@ const fmtDate = (d: Date) => d.toISOString().slice(0, 10);
           <p class="post-meta">
             <span is-="badge">{fmtDate(post.data.pubDate)}</span>
           </p>
-          <a class="post-title" href={`/blog/${post.id}`}>
+          <a class="post-title" href={`/blog/${post.id}`} data-post-slug={post.id}>
             <span class="prompt">~/blog/$ </span>{post.data.title}
           </a>
           {post.data.description && <p class="post-desc">{post.data.description}</p>}
@@ -47,3 +47,13 @@ const fmtDate = (d: Date) => d.toISOString().slice(0, 10);
     <p class="eyebrow">nwber@blog:~$ <span class="cursor"></span></p>
   </footer>
 </Layout>
+
+<script is:inline>
+  document.querySelectorAll('[data-post-slug]').forEach((postLink) => {
+    postLink.addEventListener('click', () => {
+      window.posthog?.capture('blog_post_selected', {
+        post_slug: postLink.dataset.postSlug,
+      });
+    });
+  });
+</script>
