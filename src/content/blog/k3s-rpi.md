@@ -1,7 +1,10 @@
-<h1 align="center">Kubernetes on a Raspberry Pi cluster</h1>
+---
+title: "Running k3s on a Raspberry Pi cluster"
+description: "A Kubernetes homelab on four Raspberry Pi 4B boards: k3s, Prometheus, Grafana, and Minecraft."
+pubDate: 2020-08-06
+---
 
-
-<p align="center"><img src="img/k8s.png" style="zoom: 67%;" />  <img src="img/docker.png" style="zoom: 67%;" /> <img src="img/prometheus-pic.png" style="zoom: 67%;" />  <img src="img/minecraft-pic.png" style="zoom: 67%;" /></p>
+<p align="center"><img src="/img/k8s.png" style="zoom: 67%;" />  <img src="/img/docker.png" style="zoom: 67%;" /> <img src="/img/prometheus-pic.png" style="zoom: 67%;" />  <img src="/img/minecraft-pic.png" style="zoom: 67%;" /></p>
 
 I'm new to DevOps. I recently started as an Associate DevOps Engineer and there seem to be a million things to learn. So I figured I could do a project running Kubernetes on some Raspberry Pi's. It's a cheap(ish) way to sink my teeth into the technology. When I'm working in the cloud, I have a tendency to blow away an instance when it's acting funny. With a physical build, this will hopefully force me to learn the tools better, plus cloud bills get expensive fast. I'll be focusing on learning Kubernetes and it's respective tooling, but I'm interested in where this project may go as I learn more.
 
@@ -43,7 +46,7 @@ This cluster clocks in with 16 ARM cores, 8GB RAM, 128GB of storage, and a netwo
 - [Kubernetes](https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/) Dashboard
   - Made by the team that makes Kubernetes, this actually is compatible with ARM. The install is fairly straightforward, but doesn't offer the most utility. The graphs and charts are nice, but I couldn't get the deployments via the dashboard to work and running it can be a pain. So...
 
-![](img/dashboard2.png)
+![](/img/dashboard2.png)
 
 - [Prometheus, Grafana, and AlertManager](https://github.com/carlosedp/cluster-monitoring).
 
@@ -51,25 +54,25 @@ This cluster clocks in with 16 ARM cores, 8GB RAM, 128GB of storage, and a netwo
 
 
 
-  ![ingress](img/prometheus-ingress.png)
+  ![ingress](/img/prometheus-ingress.png)
 
 
 
-  ![prometheus](img/prometheus2.png)
+  ![prometheus](/img/prometheus2.png)
 
 
 
-![grafana](img/grafana.png)
+![grafana](/img/grafana.png)
 
 
 
-![alertmanager](img/alertmanager.png)
+![alertmanager](/img/alertmanager.png)
 
 - Anyway, now it's time to have fun. I installed a [minecraft server](https://www.jeffgeerling.com/blog/2020/raspberry-pi-cluster-episode-4-minecraft-pi-hole-grafana-and-more)! It runs smooth enough. If anyone wants to come over and play Minecraft feel free, my parents said it's ok.
 
-![](img/minecraft_building_world.png)
+![](/img/minecraft_building_world.png)
 
-​		![](img/gaming.png)
+​		![](/img/gaming.png)
 
 <h3>What's next:</h3>
 
