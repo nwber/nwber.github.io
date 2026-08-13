@@ -1,4 +1,8 @@
-# ArgoCD
+---
+title: "ArgoCD - Getting Started"
+description: "Setting up GitOps on a local k3s cluster with ArgoCD."
+pubDate: 2025-12-03
+---
 
 ## Why Argo?
 
@@ -87,7 +91,7 @@ syncPolicy:
 
 Click `CREATE` and everything should sync! If you used a non-default namespace like `nginx` and it doesn't exist yet, then `CreateNamespace=true` will create it for you.
 
-![nginx-example application deployed and healthy](img/argo-example-deployment.png)
+![nginx-example application deployed and healthy](/img/argo-example-deployment.png)
 
 ## Things to explore next time
 

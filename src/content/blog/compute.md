@@ -1,4 +1,8 @@
-# Cheap compute options
+---
+title: "Comparing free/cheap compute options in the cloud"
+description: "A catalogue of dirt cheap cloud compute, for those that want that sort of thing."
+pubDate: 2025-05-28
+---
 
 ## A catalogue of dirt cheap compute available, for those that want that sort of thing
 

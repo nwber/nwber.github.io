@@ -1,0 +1,30 @@
+---
+import PostHog from '../components/PostHog.astro';
+import '@webtui/css';
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = "A blog about cloud infrastructure, Kubernetes, and tinkering" } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content={description} />
+    <title>{title}</title>
+    <PostHog />
+  </head>
+  <body class="tui-window" data-webtui-theme="dark">
+    <a class="sr-only" href="#main">Skip to content</a>
+    <main id="main">
+      <slot />
+    </main>
+  </body>
+</html>

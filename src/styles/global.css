@@ -1,0 +1,188 @@
+/* Custom styles on top of WebTUI (@webtui/css, imported in Layout.astro).
+   WebTUI supplies components via attributes, not classes:
+   box-="square|round|double", is-="badge|separator|pre|button|...",
+   size-="small|large", variant-="foreground0..", direction-="x|y", marker-="tree".
+   Everything below is custom (classes); unlayered rules beat WebTUI's layers. */
+
+:root {
+  /* palette: near-black navy, grays, green accent */
+  --background0: #0d0e12;
+  --background1: #161a22;
+  --background2: #22293a;
+  --background3: #333c52;
+  --foreground0: #e8edf4;
+  --foreground1: #aab6c5;
+  --foreground2: #79879c;
+  --accent: #7ee0a3;
+  --box-border-color: var(--foreground1);
+  --font-family: ui-monospace, SFMono-Regular, Menlo, "JetBrains Mono", "IBM Plex Mono", monospace;
+  --font-size: 16px;
+  --line-height: 1.5;
+  --font-weight-bold: 700; /* declared by WebTUI inside its layer; keep a local copy */
+}
+
+body {
+  word-break: normal; /* WebTUI base uses break-all; too harsh for prose */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* WebTUI base kills outlines globally; restore a visible one for keyboard users */
+:focus-visible {
+  outline: 1px dashed var(--accent);
+  outline-offset: 2px;
+}
+
+/* custom layout */
+.tui-window {
+  max-width: 88ch;
+  margin-inline: auto;
+  padding: 2lh 2ch;
+}
+
+/* WebTUI separators size themselves only when stretched by flex; in block flow give them width */
+[is-~="separator"] {
+  width: 100%;
+}
+
+/* blog post article (src/pages/blog/[...slug].astro uses class="post") */
+.post {
+  max-width: 72ch;
+}
+
+.post h1 {
+  margin: 1lh 0 0.5lh;
+}
+
+.post h2 {
+  margin: 2lh 0 1lh;
+  padding-bottom: 0.5lh;
+  border-bottom: 1px dashed var(--background3);
+}
+
+.post h3 {
+  margin: 1.5lh 0 0.5lh;
+}
+
+.post p,
+.post ul,
+.post ol {
+  margin: 1lh 0;
+}
+
+.post time {
+  display: block;
+  margin: 0.5lh 0 1.5lh;
+  color: var(--foreground2);
+}
+
+.post img {
+  max-width: 100%;
+}
+
+.post table {
+  display: block;
+  overflow-x: auto;
+}
+
+.post pre {
+  margin: 1lh 0;
+}
+
+/* custom components */
+.eyebrow {
+  display: block;
+  margin: 2lh 0 1lh;
+  font-size: 0.85em;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--foreground2);
+}
+
+.divider {
+  margin: 2lh 0;
+  border-top: 1px dotted var(--foreground2);
+}
+
+.prompt {
+  color: var(--accent);
+}
+
+.banner {
+  padding: 0;
+  border: none;
+  background: transparent; /* drop WebTUI's mid-line pre band */
+  color: var(--foreground1);
+  white-space: pre;
+  overflow-x: auto;
+}
+
+pre {
+  border: 1px solid var(--background3);
+  overflow-x: auto;
+}
+
+a {
+  color: var(--accent);
+}
+
+a:hover {
+  background-color: var(--background1);
+}
+
+/* post list (index page) */
+.post-list {
+  margin-top: 1lh;
+}
+
+.post-list li::before {
+  content: none; /* WebTUI gives li a "- " marker */
+}
+
+.post-list > li {
+  margin-bottom: 1lh;
+}
+
+.post-title {
+  display: block;
+  font-weight: var(--font-weight-bold);
+  color: var(--foreground0);
+}
+
+.post-desc {
+  margin-top: 0.5lh;
+}
+
+.post-meta {
+  margin-bottom: 0.5lh;
+}
+
+/* blinking cursor accent */
+.cursor::after {
+  content: "\2588";
+  color: var(--accent);
+  animation: cursor-blink 1.1s steps(2, start) infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cursor::after {
+    animation: none;
+  }
+}
+
+@keyframes cursor-blink {
+  to {
+    visibility: hidden;
+  }
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
