@@ -30,7 +30,7 @@ jobs:
       - name: Build your site
         run: npm run build
         env:
-          PUBLIC_POSTHOG_KEY: ${{ vars.PUBLIC_POSTHOG_KEY }}
+          PUBLIC_POSTHOG_PROJECT_TOKEN: ${{ vars.PUBLIC_POSTHOG_PROJECT_TOKEN }}
           PUBLIC_POSTHOG_HOST: ${{ vars.PUBLIC_POSTHOG_HOST }}
       - name: Upload pages artifact
         uses: actions/upload-pages-artifact@v3

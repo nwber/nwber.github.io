@@ -32,8 +32,8 @@ A GitHub Actions workflow (`.github/workflows/deploy.yml`) builds the site with 
 
 ## Analytics
 
-PostHog is loaded when `PUBLIC_POSTHOG_KEY` is set at build time (see `.env.example` for local use, copy it to `.env`).
+PostHog is loaded when `PUBLIC_POSTHOG_PROJECT_TOKEN` and `PUBLIC_POSTHOG_HOST` are set at build time (see `.env.example` for local use, copy it to `.env`).
 
 For CI deploys, add repo **Actions variables** (Settings > Secrets and variables > Actions > Variables):
-- `PUBLIC_POSTHOG_KEY`: the project API key (`phc_...`) from app.posthog.com
-- `PUBLIC_POSTHOG_HOST`: optional; defaults to `https://us.i.posthog.com` (EU cloud: `https://eu.i.posthog.com`)
+- `PUBLIC_POSTHOG_PROJECT_TOKEN`: the project API key (`phc_...`) from app.posthog.com
+- `PUBLIC_POSTHOG_HOST`: `https://us.i.posthog.com` (EU cloud: `https://eu.i.posthog.com`)
