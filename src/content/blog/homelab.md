@@ -23,8 +23,10 @@ Some of the specific use cases are:
 Compute:
 
 - I currently only have one "server" (will refer to this going forward as `homelab1`): an HP Elitedesk G4 800 with an Intel i7-8700, 16GB DDR4, and a 256GB SSD. I've also added an 750GB Intel Optane P4800X (with a M.2 to U.2 adapter), a NICGIGA 2.5Gb NIC, and a TP-Link USB Bluetooth adapter.
-- This runs the majority of the services.
-- `<include picture of homelab1>`
+- This runs the majority of the services
+- Below is a sick picture of the internals. The P4800X is in there loose because SSDs are durable and I can't be bothered to mount it properly
+
+![Homelab1 server internals](/img/homelab1.jpg)
 
 Storage:
 
