@@ -1,6 +1,5 @@
 ---
 import PostHog from '../components/PostHog.astro';
-import '@webtui/css';
 import '../styles/global.css';
 
 interface Props {
@@ -19,12 +18,58 @@ const { title, description = "A blog about cloud infrastructure, Kubernetes, and
     <meta name="generator" content={Astro.generator} />
     <meta name="description" content={description} />
     <title>{title}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100..800&family=Space+Grotesk:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
     <PostHog />
   </head>
-  <body class="tui-window" data-webtui-theme="dark">
-    <a class="sr-only" href="#main">Skip to content</a>
-    <main id="main">
-      <slot />
-    </main>
+  <body>
+    <div class="site">
+      <header class="nav">
+        <div class="wrap nav-inner">
+          <a class="brand" href="/">
+            <span class="brand-mark" aria-hidden="true"></span>
+            nwber.dev
+          </a>
+          <nav class="nav-links" aria-label="Main">
+            <a href="/">Blog</a>
+            <a href="https://github.com/nwber">GitHub</a>
+            <a class="nav-cta" href="https://github.com/nwber">Follow</a>
+          </nav>
+        </div>
+      </header>
+
+      <main class="site-main">
+        <slot />
+      </main>
+
+      <footer class="footer">
+        <div class="wrap">
+          <div class="footer-inner">
+            <div class="footer-brand">
+              <span class="brand">
+                <span class="brand-mark" aria-hidden="true"></span>
+                nwber.dev
+              </span>
+              <p>cloud infrastructure · kubernetes · tinkering</p>
+            </div>
+            <div class="footer-links">
+              <div class="footer-col">
+                <span class="col-title">Site</span>
+                <a href="/">Blog</a>
+              </div>
+              <div class="footer-col">
+                <span class="col-title">Elsewhere</span>
+                <a href="https://github.com/nwber">GitHub</a>
+              </div>
+            </div>
+          </div>
+          <div class="footer-bottom">© {new Date().getFullYear()} nwber</div>
+        </div>
+      </footer>
+    </div>
   </body>
 </html>

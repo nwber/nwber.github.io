@@ -12,7 +12,6 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@webtui/css": "^0.1.10",
     "astro": "^7.2.1",
     "posthog-js": "^1.417.0"
   }
