@@ -115,25 +115,9 @@ h1, h2, h3, h4 {
   color: var(--foreground);
 }
 
-.nav-cta {
-  font-family: var(--font-mono);
-  font-size: 0.85rem;
-  padding: 0.35rem 0.8rem;
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  background: var(--foreground);
-  color: #0f172a;
-  transition: opacity 0.15s ease;
-}
-
-.nav-cta:hover {
-  opacity: 0.85;
-  color: #0f172a;
-}
-
 /* ---------- hero ---------- */
 .hero {
-  padding: 5rem 0 3rem;
+  padding: 2rem 0 1rem;
 }
 
 .eyebrow {
@@ -368,31 +352,17 @@ h1, h2, h3, h4 {
 
 .footer-links {
   display: flex;
-  gap: 2rem;
-  flex-wrap: wrap;
-}
-
-.footer-col {
-  display: flex;
   flex-direction: column;
   gap: 0.4rem;
+  align-items: flex-start;
 }
 
-.footer-col .col-title {
-  font-family: var(--font-mono);
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: var(--muted);
-  margin-bottom: 0.4rem;
-}
-
-.footer-col a {
+.footer-links a {
   font-size: 0.9rem;
   color: var(--muted);
 }
 
-.footer-col a:hover {
+.footer-links a:hover {
   color: var(--foreground);
 }
 
